@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Orçamento Baiano Chaveiro</title>
+  </head>
+  <body>
+    <header>
+      <h1>Orçamento Baiano Chaveiro</h1>
+    </header>
+    <main>
+      <section class="cliente-info">
+        <div class="logo-upload">
+          <label for="logo-input" class="logo-label">
+            <img
+              id="logo-preview"
+              src="https://via.placeholder.com/150x80?text=Sua+Logo+Aqui"
+              alt="Logomarca do Cliente"
+            />
+            <span class="upload-text">Clique para adicionar sua logo</span>
+          </label>
+          <input
+            type="file"
+            id="logo-input"
+            accept="image/*"
+            style="display: none"
+          />
+        </div>
+
+        <div class="contato-redes">
+          <div class="contato-item">
+            <h3>Endereço:</h3>
+            <p id="endereco-texto">
+              Rua Exemplo, 123 - Bairro - Cidade, Estado
+            </p>
+            <button class="editar-info" data-target="endereco">Editar</button>
+          </div>
+          <div class="contato-item">
+            <h3>Contato:</h3>
+            <p id="contato-texto">(XX) XXXX-XXXX</p>
+            <button class="editar-info" data-target="contato">Editar</button>
+          </div>
+          <div class="contato-item">
+            <h3>Redes Sociais:</h3>
+            <p>
+              <a
+                href="#"
+                target="_blank"
+                id="instagram-link"
+                class="rede-social-link"
+                >Instagram</a
+              >
+              |
+              <a
+                href="#"
+                target="_blank"
+                id="facebook-link"
+                class="rede-social-link"
+                >Facebook</a
+              >
+            </p>
+            <button class="editar-info" data-target="redes-sociais">
+              Editar
+            </button>
+          </div>
+        </div>
+      </section>
+      <div class="table-responsive-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Produto</th>
+              <th>Quantidade</th>
+              <th>Valor Unitário (R$)</th>
+              <th>Valor Total (R$)</th>
+            </tr>
+          </thead>
+          <tbody id="tabela-orcamento"></tbody>
+        </table>
+      </div>
+      <button id="adicionar-linha">Adicionar Linha</button>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

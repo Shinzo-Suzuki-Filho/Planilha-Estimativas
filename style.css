@@ -1,0 +1,411 @@
+/* --- Estilos Gerais (Mantenha o que já tinha, ajustando se necessário) --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.2em;
+    font-weight: 600;
+}
+
+main {
+    flex-grow: 1;
+    max-width: 1000px;
+    margin: 30px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Estilos da Nova Seção de Cliente --- */
+.cliente-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Alinha o topo dos itens */
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee; /* Linha separadora */
+    flex-wrap: wrap; /* Permite que os itens quebrem a linha */
+    gap: 20px; /* Espaçamento entre os itens flex */
+}
+
+.logo-upload {
+    text-align: center;
+    flex-shrink: 0; /* Não encolhe a logo */
+    min-width: 150px; /* Largura mínima para a área da logo */
+}
+
+.logo-label {
+    display: block;
+    cursor: pointer;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    transition: border-color 0.3s ease;
+    width: 100%; /* Ocupa a largura do seu container */
+    max-width: 180px; /* Largura máxima para a área da logo */
+    margin: 0 auto;
+}
+
+.logo-label:hover {
+    border-color: #007bff;
+}
+
+#logo-preview {
+    max-width: 100%;
+    height: auto; /* Mantém a proporção */
+    max-height: 80px; /* Altura máxima da imagem */
+    display: block;
+    margin: 0 auto 5px auto;
+}
+
+.upload-text {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 5px;
+    display: block;
+}
+
+.contato-redes {
+    flex-grow: 1; /* Permite que o container de contato ocupe o espaço restante */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaçamento entre os itens de contato */
+    max-width: calc(100% - 200px); /* Garante que não invada a área da logo */
+}
+
+.contato-item {
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permite que o conteúdo quebre a linha em telas pequenas */
+    gap: 8px;
+}
+
+.contato-item h3 {
+    margin: 0;
+    font-size: 1em;
+    color: #555;
+    flex-shrink: 0; /* Não encolhe o título */
+}
+
+.contato-item p {
+    margin: 0;
+    font-size: 0.95em;
+    color: #333;
+    flex-grow: 1; /* Permite que o texto ocupe o espaço */
+    text-align: right;
+}
+
+.rede-social-link {
+    color: #007bff;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.rede-social-link:hover {
+    text-decoration: underline;
+}
+
+.editar-info {
+    background-color: #6c757d; /* Cinza para o botão de editar */
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85em;
+    transition: background-color 0.3s ease;
+    flex-shrink: 0; /* Não encolhe o botão */
+}
+
+.editar-info:hover {
+    background-color: #5a6268;
+}
+
+/* --- Estilos da Tabela (Mantenha o que já tinha) --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+    table-layout: fixed;
+}
+
+th, td {
+    border: 1px solid #e0e0e0;
+    padding: 12px 15px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+th {
+    background-color: #e9ecef;
+    font-weight: bold;
+    color: #555;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tbody tr:hover {
+    background-color: #e2f0ff;
+    cursor: pointer;
+}
+
+td input[type="text"],
+td input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 1em;
+}
+
+td span {
+    display: block;
+    font-weight: bold;
+    color: #007bff;
+}
+
+button#adicionar-linha { /* Especificando o ID para não confundir com .editar-info */
+    background-color: #28a745;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    align-self: flex-end;
+    min-width: 180px;
+}
+
+button#adicionar-linha:hover {
+    background-color: #218838;
+}
+
+/* --- Responsividade para Tablets (768px a 1024px) --- */
+@media (max-width: 1024px) {
+    main {
+        margin: 20px auto;
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    /* Ajustes para a nova seção em tablet */
+    .cliente-info {
+        flex-direction: column; /* Em tablets, empilha os itens verticalmente */
+        align-items: center; /* Centraliza itens */
+        text-align: center;
+    }
+
+    .contato-redes {
+        max-width: 100%; /* Ocupa a largura total */
+    }
+
+    .contato-item {
+        flex-direction: column; /* Empilha o título e o texto */
+        align-items: center; /* Centraliza */
+        text-align: center;
+        gap: 5px;
+    }
+
+    .contato-item p {
+        text-align: center; /* Centraliza o texto */
+    }
+
+    th, td {
+        padding: 10px 12px;
+    }
+
+    button#adicionar-linha {
+        padding: 10px 20px;
+        font-size: 1em;
+        min-width: 160px;
+    }
+}
+
+/* --- Responsividade para Smartphones (até 767px) --- */
+@media (max-width: 767px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        padding: 15px 0;
+    }
+
+    h1 {
+        font-size: 1.6em;
+    }
+
+    main {
+        margin: 15px auto;
+        padding: 15px;
+        border-radius: 5px;
+    }
+
+    /* Ajustes para a nova seção em smartphone */
+    .cliente-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px; /* Espaçamento menor */
+    }
+
+    .logo-upload {
+        width: 100%; /* Ocupa largura total */
+        max-width: none; /* Remove a largura máxima */
+    }
+
+    .logo-label {
+        width: 150px; /* Largura fixa para o label da logo */
+        max-width: 100%;
+    }
+
+    #logo-preview {
+        max-height: 60px; /* Reduz a altura da logo */
+    }
+
+    .contato-redes {
+        width: 100%; /* Ocupa a largura total */
+        max-width: none;
+    }
+
+    .contato-item {
+        flex-direction: column; /* Garante empilhamento vertical */
+        align-items: center; /* Centraliza */
+        text-align: center;
+        padding: 8px 10px;
+        gap: 5px;
+    }
+
+    .contato-item p, .contato-item h3 {
+        width: 100%; /* Ocupa a largura total */
+        text-align: center;
+    }
+
+    .editar-info {
+        width: 100%; /* Botão editar ocupa a largura total */
+        margin-top: 8px; /* Espaço acima do botão */
+    }
+
+    /* Tabela Responsiva - Mantenha o que já tinha */
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        background-color: #fff;
+    }
+
+    td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 45%;
+        text-align: right;
+        font-size: 0.95em;
+        white-space: normal;
+        word-wrap: break-word;
+        min-height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    td:last-child {
+        border-bottom: 0;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        width: 40%;
+        font-weight: bold;
+        text-align: left;
+        color: #555;
+        box-sizing: border-box;
+        padding-right: 10px;
+    }
+
+    td input[type="text"],
+    td input[type="number"] {
+        width: calc(100% - 10px);
+        text-align: right;
+        margin-left: auto;
+    }
+
+    td span {
+        text-align: right;
+        width: 100%;
+    }
+
+    button#adicionar-linha {
+        width: 100%;
+        padding: 15px;
+        font-size: 1.1em;
+        margin-top: 15px;
+        align-self: center;
+    }
+}
+
+/* Para telas muito pequenas (smartphones menores) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.4em;
+    }
+
+    td {
+        padding-left: 40%;
+        font-size: 0.9em;
+    }
+
+    td::before {
+        width: 35%;
+        left: 10px;
+    }
+}
